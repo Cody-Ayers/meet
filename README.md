@@ -3,6 +3,10 @@
 This is a (PWA) progressive web application using a test-driven development (TDD) technique
 This app uses Google Calendar API to fetch upcoming events.
 
+## Serverless Functions
+
+- The Meet App will use the serverless functions for things such as user authentication, real-time data processing, event recommendations and scalability. It will also handle the backend process for my app.
+
 ## Feature User stories
 
 - Feature 2: Show/Hide Event Details
