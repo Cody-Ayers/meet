@@ -39,54 +39,63 @@ This app uses Google Calendar API to fetch upcoming events.
 - Feature 2: Show/Hide Event Details
 
 Scenario: An event element is collapsed by default.
-Given the user is viewing the events
-When the user opens the app
-Then the event details for each event should be collapsed by default
+
+> Given the user is viewing the events
+> When the user opens the app
+> Then the event details for each event should be collapsed by default
 
 Scenario: User can expand an event to see details.
-Given the user is viewing the events with collapsed details
-When the user chooses to expand a specific event
-Then the details of that event should be visible
+
+> Given the user is viewing the events with collapsed details
+> When the user chooses to expand a specific event
+> Then the details of that event should be visible
 
 Scenario: User can collapse an event to hide details.
-Given the user is viewing the events with expanded details
-When the user chooses to collapse a specific event
-Then the details of that event should be hidden
+
+> Given the user is viewing the events with expanded details
+> When the user chooses to collapse a specific event
+> Then the details of that event should be hidden
 
 - Feature 3: Specify Number of Events
 
 Scenario: When user hasn’t specified a number, 32 events are shown by default.
-Given the user has not specified the number of events
-When the user opens the app
-Then 32 events should be displayed by default
+
+> Given the user has not specified the number of events
+> When the user opens the app
+> Then 32 events should be displayed by default
 
 Scenario: User can change the number of events displayed.
-Given the user is viewing the events
-When the user chooses to specify a different number of events
-Then the app should display the selected number of events
+
+> Given the user is viewing the events
+> When the user chooses to specify a different number of events
+> Then the app should display the selected number of events
 
 - Feature 4: Use the App When Offline
 
 Scenario: Show cached data when there’s no internet connection.
-Given the user has previously accessed the app and cached data is available
-When the user opens the app without an internet connection
-Then the app should display the cached data
+
+> Given the user has previously accessed the app and cached data is available
+> When the user opens the app without an internet connection
+> Then the app should display the cached data
 
 Scenario: Show error when user changes search settings (city, number of events).
-Given the user is using the app with an internet connection
-When the user changes search settings like city or number of events
-Then the app should show an error message indicating the need for an internet connection
+
+> Given the user is using the app with an internet connection
+> When the user changes search settings like city or number of events
+> Then the app should show an error message indicating the need for an internet connection
 
 - Feature 5: Add an App Shortcut to the Home Screen
 
 Scenario: User can install the meet app as a shortcut on their device home screen
-Given the user has the meet app installed on their device
-When the user chooses to add a shortcut to the home screen
-Then a shortcut for the meet app should be added to the device home screen
+
+> Given the user has the meet app installed on their device
+> When the user chooses to add a shortcut to the home screen
+> Then a shortcut for the meet app should be added to the device home screen
 
 - Feature 6: Display Charts Visualizing Event Details
 
 Scenario: Show a chart with the number of upcoming events in each city.
-Given the user is viewing the events
-When the user chooses to view charts
-Then the app should display a chart showing the number of upcoming events in each city
+
+> Given the user is viewing the events
+> When the user chooses to view charts
+> Then the app should display a chart showing the number of upcoming events in each city
