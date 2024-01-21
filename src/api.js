@@ -95,14 +95,12 @@ export const getAccessToken = async () => {
     const searchParams = new URLSearchParams(window.location.search);
     const code = await searchParams.get("code");
     if (!code) {
-      const response = await fetch(
-        "https://q0w5lkoaz3.execute-api.us-west-1.amazonaws.com/dev/api/get-auth-url"
-      );
+      const response = await fetch("YOUR_SERVERLESS_GET_AUTH_URL_ENDPOINT");
       const result = await response.json();
       const { authUrl } = result;
       return (window.location.href = authUrl);
     }
-    return code && getAccessToken(code);
+    return code && getToken(code);
   }
   return accessToken;
 };
