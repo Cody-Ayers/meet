@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 
-const NumberOfEvents = ({}) => {
+const NumberOfEvents = ({ setCurrentNOE }) => {
   const [numberEvents, setNumberEvents] = useState(32);
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
     setNumberEvents(value);
+    setCurrentNOE(value);
   };
 
   return (
