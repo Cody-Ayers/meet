@@ -3,7 +3,7 @@
     .App {
       text-align: center;
       padding: 2% 5%;
-      background-color: antiquewhite;
+      background-color: aqua;
       color: black;
     }
     
@@ -29,9 +29,9 @@
     input[type="text"],
     input[type="number"] {
       padding: 8px 6px 8px 10px;
-      border-radius: 4px;
+      border-radius: 25px;
       outline: none;
-      border: 1px solid #ccc;
+      border: 2px solid coral;
       font-size: 14px;
       line-height: 20px;
       align-self: center;
@@ -81,17 +81,19 @@
       padding: 10px 10px 35px;
       margin-bottom: 10px;
       text-align: left;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 3px solid coral;
+      border-radius: 25px;
       position: relative;
     }
     
     .details-btn {
       position: absolute;
+      background-color: coral;
       right: 5px;
       bottom: 5px;
       padding: 5px 8px;
-      border-radius: 4px;
+      border-radius: 8px;
+      border-color: white;
       outline: none;
       cursor: pointer;
     }
