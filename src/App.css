@@ -31,7 +31,7 @@
       padding: 8px 6px 8px 10px;
       border-radius: 25px;
       outline: none;
-      border: 2px solid coral;
+      border: 3px solid coral;
       font-size: 14px;
       line-height: 20px;
       align-self: center;
@@ -88,6 +88,7 @@
     
     .details-btn {
       position: absolute;
+      font-size: medium;
       background-color: coral;
       right: 5px;
       bottom: 5px;
