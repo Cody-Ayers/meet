@@ -78,6 +78,7 @@ export const getEvents = async () => {
       token;
     const response = await fetch(url);
     const result = await response.json();
+
     if (result) {
       localStorage.setItem("lastEvents", JSON.stringify(result.events));
       return result.events;
