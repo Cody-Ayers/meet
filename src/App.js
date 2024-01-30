@@ -20,15 +20,6 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState("");
   const [warningAlert, setWarningAlert] = useState("");
 
-  useEffect(() => {
-    if (navigator.onLine) {
-      setWarningAlert("");
-    } else {
-      setWarningAlert("Currently Offline, list may not be up to date!");
-    }
-    fetchData();
-  }, [currentCity, currentNOE]);
-
   const fetchData = async () => {
     const allEvents = await getEvents();
     const filteredEvents =
@@ -38,6 +29,15 @@ const App = () => {
     setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
   };
+
+  useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert("");
+    } else {
+      setWarningAlert("Currently Offline, list may not be up to date!");
+    }
+    fetchData();
+  }, [currentCity, currentNOE]);
 
   return (
     <div className="App">
