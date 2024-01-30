@@ -12,8 +12,9 @@
     }
     
     h1 {
-        color: black;
-        padding: 3%;
+        font-size: 50px;
+        color: rgb(212, 104, 64);
+        padding: 1%;
         text-align: center;
     }
     
