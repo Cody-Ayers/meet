@@ -23,7 +23,7 @@ const CityEventsChart = ({ allLocations, events }) => {
       const count = events.filter(
         (event) => event.location === location
       ).length;
-      const city = location.split(", ")[0];
+      const city = location.split(/, | - /)[0];
       return { city, count };
     });
     return data;
@@ -33,14 +33,21 @@ const CityEventsChart = ({ allLocations, events }) => {
     <ResponsiveContainer width="99%" height={400}>
       <ScatterChart
         margin={{
-          top: 25,
-          right: 25,
-          bottom: 25,
-          left: 25,
+          top: 20,
+          right: 20,
+          bottom: 60,
+          left: -30,
         }}
       >
-        <CartesianGrid />
-        <XAxis type="category" dataKey="city" name="City" />
+        <CartesianGrid fill="aqua" fillOpacity={0.8} />
+        <XAxis
+          type="category"
+          dataKey="city"
+          name="City"
+          angle={60}
+          interval={0}
+          tick={{ dx: 20, dy: 40, fontsize: 14 }}
+        />
         <YAxis
           type="number"
           dataKey="count"
@@ -48,7 +55,7 @@ const CityEventsChart = ({ allLocations, events }) => {
           allowDecimals={false}
         />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Scatter name="A school" data={data} fill="aqua" />
+        <Scatter name="A school" data={data} fill="coral" />
       </ScatterChart>
     </ResponsiveContainer>
   );
