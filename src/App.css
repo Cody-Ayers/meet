@@ -23,13 +23,17 @@
     }
     
     p {
-      margin: 5px 0;
+      margin: 10px 0;
+      font-size: 14px;
+      line-height: 1.5;
     }
+
+
     
     input[type="text"],
     input[type="number"] {
       padding: 8px 6px 8px 10px;
-      border-radius: 25px;
+      border-radius: 10px;
       outline: none;
       border: 3px solid coral;
       font-size: 14px;
@@ -76,6 +80,26 @@
     .suggestions > li:hover {
       background-color: #bcdcdb;
     }
+
+    .charts-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 10px 10px 35px;
+      margin-bottom: 30px;
+      text-align: left;
+      border: 3px solid coral;
+      background-color: aliceblue;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+    }
+
+    @media (max-width: 768px) {
+        .charts-container {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
     
     .event {
       padding: 10px 10px 35px;
@@ -83,8 +107,9 @@
       text-align: left;
       border: 3px solid coral;
       background-color: aqua;
-      border-radius: 25px;
+      border-radius: 10px;
       position: relative;
+      box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
     }
     
     .details-btn {
@@ -95,7 +120,10 @@
       bottom: 5px;
       padding: 5px 8px;
       border-radius: 8px;
-      border-color: white;
+      border: 1px solid white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       outline: none;
       cursor: pointer;
     }
+
+    
