@@ -69,4 +69,4 @@ export const getAccessToken = async () => {
     : null;
 
   if (!accessToken || tokenCheck?.error) {
-    localStorage.removeItem("access
+    localStorage.removeItem("access_token");
